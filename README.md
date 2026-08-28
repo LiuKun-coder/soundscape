@@ -34,7 +34,7 @@ python3 -m http.server 8000
 ## 🎵 音源与授权
 
 6 个音频均来自 [Mixkit Free Sound Effects](https://mixkit.co/free-sound-effects/)，适用 [Mixkit License](https://mixkit.co/license/#sfxFree)（免费使用、可商用、无需署名）。
-壁炉素材经 ffmpeg 交叉淡化拼接为 50s 无缝循环，避免短样本循环接缝。
+壁炉由燃烧底噪与清脆噼啪层叠加，并与咖啡馆素材一样经 ffmpeg 交叉淡化拼为无缝长循环（壁炉 50s / 咖啡馆 134s），避免短样本循环接缝。
 
 ## 📁 结构
 
