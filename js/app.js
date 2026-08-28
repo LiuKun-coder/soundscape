@@ -30,6 +30,7 @@ function ensureCtx(){
     master = ctx.createGain(); master.gain.value=.9;
     master.connect(ctx.destination);
     ctx.master = master;
+    preloadAll(ctx);                       // 后台预加载全部声音，点击秒开
   }
   if(ctx.state==="suspended") ctx.resume();
   return ctx;
@@ -104,7 +105,7 @@ function toggle(id, forceOn){
     const c=ensureCtx();
     let act=active.get(id);
     if(!act){
-      const sound=s.create(c);
+      const sound=soundFor(id, c);
       act={sound, el:s.el}; active.set(id,act);
       sound.fadeIn();
     }
